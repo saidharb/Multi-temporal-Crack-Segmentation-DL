@@ -188,7 +188,7 @@ def predict_image(PROJECT_DIR, image_name, model_name, target_size):
     seg_mask_pred = create_prediction_mask(model, image_dataset, save_path, threshold = 0.5)
 
 def log_wandb(project_name, run_name, csv_file):
-    wandb.login(key='22efc7f5b70c0a0812fb73908cb58c659dfd8239')
+    wandb.login(key='') # Insert key
     wandb.init(project = project_name, name = run_name)
     df_csv = pd.read_csv(csv_file)
     for index, row in df_csv.iterrows():
